@@ -48,7 +48,7 @@ export function Slide01Cover({ isActive }: SlideComponentProps) {
       <div className="cover-grid" />
       <div className="cover-glow" />
       <div style={{ position: "relative", zIndex: 1 }}>
-        <div className="eyebrow" style={{ opacity: 1 }}>▸ CONFIDENTIAL · PITCH DECK</div>
+        <div className="eyebrow" style={{ opacity: 1 }}>▸</div>
         <h1 className="title" data-split-chars style={{ opacity: 1, color: "#00d4ff", textShadow: "0 0 40px rgba(0, 212, 255,0.3)" }}>
           MITS
         </h1>
@@ -1331,10 +1331,10 @@ export function Slide17TractionTrust({ isActive }: SlideComponentProps) {
 
   const trusts = [
     {
-      val: "5",
-      label: "Pilot Checkpoints DHA",
-      desc: "Successfully deployed and tested in DHA residential sectors, achieving rapid automated gate barrier openings."
-    },
+  val: "5",
+  label: "Who will need MITS?",
+  desc: "• Municipal law enforcement agencies (fixed & mobile ALPR replacement)\n• Port authorities and critical infrastructure operators\n• Federal security integrators and systems contractors\n• Commercial campuses, airports, transit hubs\n• Federal procurement via GSA Schedule and SEWP contracts"
+},
     {
       val: "99.4%",
       label: "Custom Plate Yield",
