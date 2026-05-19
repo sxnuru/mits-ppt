@@ -68,6 +68,44 @@ export function Slide01Cover({ isActive }: SlideComponentProps) {
 }
 
 // ────────────────────────────────────────────────────────────────────────────────
+// SLIDE 1b: ABOUT RELIANCE & ALT
+// ────────────────────────────────────────────────────────────────────────────────
+export function Slide01bAbout({ isActive }: SlideComponentProps) {
+  return (
+    <section data-slide-idx={1} className={slideClassName(isActive)} id="s1b">
+      <div className="eyebrow" style={{ opacity: 1 }}>BEHIND MITS</div>
+      <h2 className="title" style={{ opacity: 1, fontSize: "48px", fontWeight: "bold", marginBottom: "40px" }}>The Synergy of Hardware & Software</h2>
+      
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
+        {/* Left: Reliance */}
+        <div style={{ display: "flex", flexDirection: "column", background: "transparent", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "16px", padding: "32px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "24px" }}>
+            <img src="/assets/reliance.jpg" alt="Reliance" style={{ width: "64px", height: "64px", objectFit: "cover", borderRadius: "8px" }} />
+            <div style={{ fontSize: "22px", fontWeight: "bold", color: "#ffffff" }}>Reliance Corporation</div>
+          </div>
+          <div style={{ fontSize: "18px", color: "rgba(255,255,255,0.75)", lineHeight: "1.7" }}>
+            Reliance Corporation (Pvt.) Ltd. is a dynamic and forward-thinking organization with a strong presence across international markets, supported by its sister concerns including Reliance Hardware Technologies and Reliance Link Trading. The Group specializes in import and export solutions for hardware, IT equipment, and advanced technology systems, offering comprehensive procurement and logistics services to a diverse client base. With a firm commitment to customer satisfaction, operational excellence, and reliability, Reliance has established itself as a trusted partner for businesses seeking efficient and cost-effective solutions.
+          </div>
+        </div>
+
+        {/* Right: Anti Linear Tech */}
+        <div style={{ display: "flex", flexDirection: "column", background: "transparent", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "16px", padding: "32px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "24px" }}>
+            <div style={{ width: "64px", height: "64px", borderRadius: "8px", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <img src="/assets/alt.png" alt="Anti Linear Tech" style={{ width: "64px", height: "64px", objectFit: "contain" }} />
+            </div>
+            <div style={{ fontSize: "22px", fontWeight: "bold", color: "#ffffff" }}>Anti Linear Technologies</div>
+          </div>
+          <div style={{ fontSize: "18px", color: "rgba(255,255,255,0.75)", lineHeight: "1.7" }}>
+            At Anti Linear Technologies, we believe the most effective route to innovation isn't always a straight line. We are a specialized software studio providing the technical agility that modern businesses need to scale. We deliver the engineering precision that turns ambitious concepts into functional, secure, and beautiful digital reality. Built in Pakistan, engineered for the global market—we code the extraordinary so you can lead your industry.
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ────────────────────────────────────────────────────────────────────────────────
 // SLIDE 2: THE PROBLEM (GRAPH 1: PREMIUM CUSTOM CURVE)
 // ────────────────────────────────────────────────────────────────────────────────
 export function Slide02Problem({ isActive }: SlideComponentProps) {
@@ -118,7 +156,7 @@ export function Slide02Problem({ isActive }: SlideComponentProps) {
                 ...stagger(idx),
                 opacity: 1,
                 border: "1px solid rgba(239, 68, 68, 0.15)",
-                background: "rgba(239, 68, 68, 0.02)",
+                background: "transparent",
                 padding: "16px 20px"
               }}
             >
@@ -300,7 +338,7 @@ export function Slide03Solution({ isActive }: SlideComponentProps) {
             style={{
               ...stagger(idx),
               opacity: 1,
-              background: "rgba(0, 212, 255, 0.02)",
+              background: "transparent",
               border: "1px solid rgba(0, 212, 255, 0.15)",
               padding: "40px"
             }}
@@ -388,7 +426,7 @@ export function Slide04TechEdge({ isActive }: SlideComponentProps) {
                 opacity: 1,
                 padding: "24px",
                 border: "1px solid rgba(255,255,255,0.06)",
-                background: "rgba(18,22,31,0.6)"
+                background: "transparent"
               }}
             >
               <div className="card-label" style={{ fontSize: "14px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase" }}>{label}</div>
@@ -462,7 +500,7 @@ export function Slide04TechEdge({ isActive }: SlideComponentProps) {
             style={{
               padding: "16px 20px",
               borderRadius: "14px",
-              background: "rgba(0, 212, 255, 0.05)",
+              background: "transparent",
               border: "1px solid rgba(0, 212, 255, 0.12)",
               fontSize: "16px",
               color: "rgba(255,255,255,0.8)",
@@ -538,7 +576,7 @@ export function Slide06FunctionalScope({ isActive }: SlideComponentProps) {
               opacity: 1,
               padding: "28px 32px",
               border: "1px solid rgba(255,255,255,0.06)",
-              background: "rgba(18,22,31,0.6)"
+              background: "transparent"
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
@@ -608,7 +646,7 @@ export function Slide07ProductRealTime({ isActive }: SlideComponentProps) {
               style={{
                 ...stagger(idx),
                 opacity: 1,
-                background: "rgba(18,22,31,0.6)",
+                background: "transparent",
                 border: "1px solid rgba(255,255,255,0.06)",
                 padding: "30px 40px"
               }}
@@ -1065,7 +1103,7 @@ export function Slide14WhyNow({ isActive }: SlideComponentProps) {
                 opacity: 1,
                 padding: "24px",
                 border: "1px solid rgba(255,255,255,0.06)",
-                background: "rgba(18,22,31,0.6)"
+                background: "transparent"
               }}
             >
               <div style={{ fontSize: "20px", fontWeight: "bold", color: "#00d4ff" }}>{title}</div>
@@ -1326,7 +1364,7 @@ export function Slide17TractionTrust({ isActive }: SlideComponentProps) {
               style={{
                 ...stagger(idx),
                 opacity: 1,
-                background: "rgba(18,22,31,0.6)",
+                background: "transparent",
                 border: "1px solid rgba(255,255,255,0.06)",
                 padding: "30px 40px"
               }}
@@ -1520,6 +1558,7 @@ export function Slide18ThankYou({ isActive }: SlideComponentProps) {
 // ────────────────────────────────────────────────────────────────────────────────
 export const slides = [
   Slide01Cover,
+  Slide01bAbout,
   Slide02Problem,
   Slide03Solution,
   Slide04TechEdge,
