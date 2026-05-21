@@ -613,6 +613,25 @@ export function Slide09AgentSwarms({
   isActive,
   onAdvance,
 }: SlideComponentProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (isActive) {
+      video.currentTime = 0;
+      video.volume = 1.0;
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {});
+      }
+    } else {
+      video.pause();
+      video.currentTime = 0;
+    }
+  }, [isActive]);
+
   return (
     <section
       data-slide-idx={7}
@@ -621,15 +640,19 @@ export function Slide09AgentSwarms({
     >
       <div className="swarm-video-shell" data-stagger-item style={stagger(0)}>
         <div className="swarm-video-frame" id="s8-video-frame">
-          {isActive && (
-            <iframe
-              className="swarm-video swarm-video-active"
-              src="https://drive.google.com/file/d/1jPA8AJz3CA16HvQNCpnKsWiDMs1Pm-wg/preview"
-              allow="autoplay"
-              style={{ width: "100%", height: "100%", border: "none" }}
-              allowFullScreen
-            />
-          )}
+          <video
+            ref={videoRef}
+            className={`swarm-video${isActive ? " swarm-video-active" : ""}`}
+            src="/assets/video-comp.mp4"
+            controls
+            playsInline
+            preload="auto"
+            onLoadedMetadata={(event) => {
+              event.currentTarget.defaultPlaybackRate = 1.0;
+              event.currentTarget.playbackRate = 1.0;
+            }}
+            onEnded={() => onAdvance?.()}
+          />
         </div>
       </div>
     </section>
