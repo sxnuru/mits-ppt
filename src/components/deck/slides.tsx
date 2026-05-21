@@ -902,7 +902,7 @@ export function Slide17TractionTrust({ isActive }: SlideComponentProps) {
               <div style={{ marginTop: "24px" }}>
                 {bullets ? (
                   <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "1fr 1fr", columnGap: "40px", rowGap: "24px" }}>
-                    {bullets.map((b:string, i:number) => (
+                    {bullets.map((b:any, i:number) => (
                       <li key={i} style={{ display: "flex", gap: "16px", lineHeight: "1.4" }}>
                         <span style={{ color: "#00d4ff", fontWeight: "bold", marginTop: "2px", fontSize: "22px" }}>▸</span>
                         <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
