@@ -643,7 +643,7 @@ export function Slide09AgentSwarms({
           <video
             ref={videoRef}
             className={`swarm-video${isActive ? " swarm-video-active" : ""}`}
-            src="/assets/video-2.mp4"
+            src="/assets/video-demo.mp4"
             controls
             playsInline
             preload="auto"
