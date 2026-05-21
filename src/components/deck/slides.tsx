@@ -56,11 +56,11 @@ export function Slide01Cover({ isActive }: SlideComponentProps) {
         <div className="title-sub" style={{ opacity: 1, fontSize: "32px", fontWeight: 500, color: "#ffffff", maxWidth: "1200px" }}>
           Multiple Identity & Tracking System
         </div>
-        <div className="sub" style={{ opacity: 1, fontSize: "22px", color: "rgba(255,255,255,0.7)", marginTop: "12px", maxWidth: "900px" }}>
+        <div className="sub" style={{ opacity: 1, fontSize: "22px", color: "rgba(255,255,255,0.95)", marginTop: "12px", maxWidth: "900px", textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>
           Advanced Vehicle & Personnel Intelligence (AVPI)
         </div>
-        <div className="title-meta" style={{ opacity: 1, marginTop: "60px", color: "rgba(255,255,255,0.4)" }}>
-          Unified Edge Intelligence for Public Safety, Safe Cities & Gated Communities in Pakistan | 2026
+        <div className="title-meta" style={{ opacity: 1, marginTop: "60px", color: "rgba(255,255,255,0.9)", textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>
+          Unified Edge Intelligence for Public Safety, Safe Cities & Gated Communities in Pakistan
         </div>
       </div>
     </section>
@@ -76,28 +76,28 @@ export function Slide01bAbout({ isActive }: SlideComponentProps) {
       <div className="eyebrow" style={{ opacity: 1 }}>BEHIND MITS</div>
       <h2 className="title" style={{ opacity: 1, fontSize: "48px", fontWeight: "bold", marginBottom: "40px" }}>The Synergy of Hardware & Software</h2>
       
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
-        {/* Left: Reliance */}
-        <div style={{ display: "flex", flexDirection: "column", background: "transparent", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "16px", padding: "32px" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "24px" }}>
-            <img src="/assets/reliance.jpg" alt="Reliance" style={{ width: "64px", height: "64px", objectFit: "cover", borderRadius: "8px" }} />
-            <div style={{ fontSize: "22px", fontWeight: "bold", color: "#ffffff" }}>Reliance Corporation</div>
+      <div style={{ display: "flex", flexDirection: "column", width: "100%", maxWidth: "1200px", margin: "0 auto" }}>
+        {/* Reliance Container */}
+        <div style={{ display: "flex", flexDirection: "column", background: "transparent", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "24px", padding: "48px 60px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "24px", marginBottom: "24px" }}>
+            <img src="/assets/reliance.jpg" alt="Reliance" style={{ width: "84px", height: "84px", objectFit: "cover", borderRadius: "12px" }} />
+            <div style={{ fontSize: "36px", fontWeight: "bold", color: "#ffffff" }}>Reliance Corporation</div>
           </div>
-          <div style={{ fontSize: "18px", color: "rgba(255,255,255,0.75)", lineHeight: "1.7" }}>
-            Reliance Corporation (Pvt.) Ltd. is a dynamic and forward-thinking organization with a strong presence across international markets, supported by its sister concerns including Reliance Hardware Technologies and Reliance Link Trading. The Group specializes in import and export solutions for hardware, IT equipment, and advanced technology systems, offering comprehensive procurement and logistics services to a diverse client base. With a firm commitment to customer satisfaction, operational excellence, and reliability, Reliance has established itself as a trusted partner for businesses seeking efficient and cost-effective solutions.
+          <div style={{ fontSize: "22px", color: "rgba(255,255,255,0.9)", lineHeight: "1.7" }}>
+            Reliance Corporation (Pvt.) Ltd. is a dynamic and forward-thinking organization with a strong presence across international markets, supported by its sister concerns including Reliance Hardware Technologies and Reliance Link Trading. The Group specializes in import and export solutions for hardware, IT equipment, and advanced technology systems, offering comprehensive procurement and logistics services to a diverse client base.
           </div>
-        </div>
 
-        {/* Right: Anti Linear Tech */}
-        <div style={{ display: "flex", flexDirection: "column", background: "transparent", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "16px", padding: "32px" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "24px" }}>
-            <div style={{ width: "64px", height: "64px", borderRadius: "8px", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <img src="/assets/alt.png" alt="Anti Linear Tech" style={{ width: "64px", height: "64px", objectFit: "contain" }} />
+          {/* Sub-division: Anti Linear Tech */}
+          <div style={{ marginTop: "44px", paddingTop: "44px", borderTop: "2px dashed rgba(255,255,255,0.15)", position: "relative" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "24px", marginBottom: "24px" }}>
+              <div style={{ width: "72px", height: "72px", borderRadius: "12px", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <img src="/assets/alt.png" alt="Anti Linear Tech" style={{ width: "72px", height: "72px", objectFit: "contain" }} />
+              </div>
+              <div style={{ fontSize: "32px", fontWeight: "bold", color: "#ffffff" }}>Anti Linear Technologies</div>
             </div>
-            <div style={{ fontSize: "22px", fontWeight: "bold", color: "#ffffff" }}>Anti Linear Technologies</div>
-          </div>
-          <div style={{ fontSize: "18px", color: "rgba(255,255,255,0.75)", lineHeight: "1.7" }}>
-            At Anti Linear Technologies, we believe the most effective route to innovation isn't always a straight line. We are a specialized software studio providing the technical agility that modern businesses need to scale. We deliver the engineering precision that turns ambitious concepts into functional, secure, and beautiful digital reality. Built in Pakistan, engineered for the global market—we code the extraordinary so you can lead your industry.
+            <div style={{ fontSize: "22px", color: "rgba(255,255,255,0.9)", lineHeight: "1.7" }}>
+              At Anti Linear Technologies, we believe the most effective route to innovation isn't always a straight line. We are a specialized software studio providing the technical agility that modern businesses need to scale. We deliver the engineering precision that turns ambitious concepts into functional, secure, and beautiful digital reality. Built in Pakistan, engineered for the global market.
+            </div>
           </div>
         </div>
       </div>
@@ -138,14 +138,14 @@ export function Slide02Problem({ isActive }: SlideComponentProps) {
   const areaPath = `${curvePath} L 610 215 L 60 215 Z`;
 
   return (
-    <section data-slide-idx={1} className={slideClassName(isActive)} id="s1">
+    <section data-slide-idx={2} className={slideClassName(isActive)} id="s1">
       <div className="eyebrow" style={{ opacity: 1 }}>THE PROBLEM</div>
-      <h2 className="title" style={{ opacity: 1, fontSize: "56px" }}>The Gated & Public Safety Surveillance Gap</h2>
+      <h2 className="title" style={{ opacity: 1, fontSize: "72px" }}>The Gated & Public Safety Surveillance Gap</h2>
       <div className="sub" style={{ opacity: 1, maxWidth: "1200px", marginBottom: "20px" }}>
         Security teams in Pakistan struggle with manual checks, fragmented tracking databases, and frequent network blackouts.
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "0.95fr 1.05fr", gap: "30px", marginTop: "10px" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "30px", marginTop: "10px" }}>
         {/* Left: Bullet Gaps */}
         <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
           {problems.map(({ icon: Icon, title, desc }, idx) => (
@@ -164,137 +164,13 @@ export function Slide02Problem({ isActive }: SlideComponentProps) {
                 <div style={{ color: "#ef4444" }}>
                   <Icon size={24} />
                 </div>
-                <div style={{ fontSize: "19px", fontWeight: 600, color: "#ffffff" }}>{title}</div>
+                <div style={{ fontSize: "28px", fontWeight: 600, color: "#ffffff" }}>{title}</div>
               </div>
-              <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "14px", marginTop: "6px", lineHeight: "1.4" }}>{desc}</div>
+              <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "20px", marginTop: "10px", lineHeight: "1.5" }}>{desc}</div>
             </div>
           ))}
         </div>
 
-        {/* Right: SVG Graph 1 (Premium Curve Style) */}
-        <div
-          style={{
-            background: "transparent",
-            borderRadius: "24px",
-            border: "1px solid rgba(0, 212, 255, 0.15)",
-            padding: "24px 28px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            position: "relative"
-          }}
-        >
-          <div>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span style={{ fontFamily: "var(--mono)", fontSize: "13px", color: "#ffd166", textTransform: "uppercase" }}>Security Latency Impact</span>
-              <span style={{ background: "transparent", color: "#ff8888", border: "1px solid rgba(239, 68, 68, 0.3)", padding: "4px 10px", borderRadius: "99px", fontSize: "12px", fontFamily: "var(--mono)" }}>
-                -90s Delay Drop
-              </span>
-            </div>
-            <div style={{ fontSize: "22px", fontWeight: 600, color: "#ffffff", marginTop: "6px" }}>Checkpoint Gate Access Bottlenecks</div>
-            <div style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", marginTop: "2px" }}>Verification delay spikes manually vs MITS automated edge entry</div>
-          </div>
-
-          <div style={{ width: "100%", height: "230px", marginTop: "10px" }}>
-            <svg viewBox="0 0 650 260" style={{ width: "100%", height: "100%", display: "block" }}>
-              <defs>
-                <linearGradient id="curveGradient" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="#ffd166" />
-                  <stop offset="45%" stopColor="#ffd166" />
-                  <stop offset="60%" stopColor="#ff5b5b" />
-                  <stop offset="85%" stopColor="#ff5b5b" />
-                  <stop offset="95%" stopColor="#00d4ff" />
-                </linearGradient>
-
-                <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#ffd166" stopOpacity="0.18" />
-                  <stop offset="50%" stopColor="#ff5b5b" stopOpacity="0.08" />
-                  <stop offset="100%" stopColor="#060b12" stopOpacity="0.0" />
-                </linearGradient>
-              </defs>
-
-              {/* Grid Lines */}
-              <line x1="60" y1="50" x2="610" y2="50" stroke="rgba(255,255,255,0.06)" strokeDasharray="5,5" />
-              <line x1="60" y1="105" x2="610" y2="105" stroke="rgba(255,255,255,0.06)" strokeDasharray="5,5" />
-              <line x1="60" y1="160" x2="610" y2="160" stroke="rgba(255,255,255,0.06)" strokeDasharray="5,5" />
-              <line x1="60" y1="215" x2="610" y2="215" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" />
-
-              {/* Y Axis Labels */}
-              <text x="25" y="55" fill="rgba(255,255,255,0.4)" fontSize="11" fontFamily="var(--mono)">125s</text>
-              <text x="25" y="110" fill="rgba(255,255,255,0.4)" fontSize="11" fontFamily="var(--mono)">100s</text>
-              <text x="25" y="165" fill="rgba(255,255,255,0.4)" fontSize="11" fontFamily="var(--mono)">75s</text>
-              <text x="25" y="220" fill="rgba(255,255,255,0.4)" fontSize="11" fontFamily="var(--mono)">50s</text>
-
-              {/* Area under curve */}
-              <path
-                d={areaPath}
-                fill="url(#areaGradient)"
-                style={{
-                  opacity: animate ? 1 : 0,
-                  transition: "opacity 1.5s ease-in-out 0.8s"
-                }}
-              />
-
-              {/* Curve Stroke Line */}
-              <path
-                d={curvePath}
-                fill="none"
-                stroke="url(#curveGradient)"
-                strokeWidth="4"
-                strokeLinecap="round"
-                style={{
-                  strokeDasharray: 800,
-                  strokeDashoffset: animate ? 0 : 800,
-                  transition: "stroke-dashoffset 1.8s ease-in-out 0.3s"
-                }}
-              />
-
-              {/* Nodes and Callout Labels */}
-              {animate && (
-                <>
-                  {/* Peak Point Dec '25 */}
-                  <g style={{ animation: "fadeIn 0.5s ease-out 0.9s forwards", opacity: 0 }}>
-                    <circle cx="300" cy="50" r="14" fill="#ffd166" opacity="0.25" />
-                    <circle cx="300" cy="50" r="6" fill="#ffffff" stroke="#ffd166" strokeWidth="3" />
-                    <text x="300" y="26" fill="#ffd166" fontSize="13" fontWeight="bold" fontFamily="var(--sans)" fontStyle="italic" textAnchor="middle">PEAK 124s DELAY</text>
-                  </g>
-
-                  {/* Mid Drop Text Callout */}
-                  <text x="420" y="105" fill="#ff5b5b" fontSize="11" fontWeight="bold" fontFamily="var(--sans)" letterSpacing="0.08em" textAnchor="middle">
-                    –122s IN 3 MONTHS
-                  </text>
-
-                  {/* Bottom Point Mar '26 */}
-                  <g style={{ animation: "fadeIn 0.5s ease-out 1.2s forwards", opacity: 0 }}>
-                    <circle cx="540" cy="175" r="14" fill="#ff5b5b" opacity="0.25" />
-                    <circle cx="540" cy="175" r="6" fill="#ffffff" stroke="#ff5b5b" strokeWidth="3" />
-                    <text x="540" y="202" fill="#ff5b5b" fontSize="13" fontWeight="bold" fontFamily="var(--sans)" textAnchor="middle">-98%</text>
-                  </g>
-
-                  {/* Now Point Apr '26 */}
-                  <g style={{ animation: "fadeIn 0.5s ease-out 1.5s forwards", opacity: 0 }}>
-                    <circle cx="610" cy="145" r="14" fill="#00d4ff" opacity="0.3" />
-                    <circle cx="610" cy="145" r="6" fill="#ffffff" stroke="#00d4ff" strokeWidth="3" />
-                    <text x="615" y="122" fill="#00d4ff" fontSize="13" fontWeight="bold" fontFamily="var(--sans)" fontStyle="italic" textAnchor="end">MITS NOW &lt;1.5s</text>
-                  </g>
-                </>
-              )}
-
-              {/* X Axis Labels */}
-              <text x="60" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Sep '25</text>
-              <text x="138" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Oct '25</text>
-              <text x="217" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Nov '25</text>
-              <text x="295" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Dec '25</text>
-              <text x="374" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Jan '26</text>
-              <text x="452" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Feb '26</text>
-              <text x="531" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Mar '26</text>
-              <text x="610" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Apr '26</text>
-            </svg>
-          </div>
-          <div style={{ textAlign: "center", fontSize: "14px", color: "rgba(255,255,255,0.45)", fontFamily: "var(--sans)", fontStyle: "italic", marginTop: "16px", letterSpacing: "0.02em" }}>
-            A massive 98% reduction in gate latency in just 3 months — The power of MITS localized Edge AI.
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -323,7 +199,7 @@ export function Slide03Solution({ isActive }: SlideComponentProps) {
   ];
 
   return (
-    <section data-slide-idx={2} className={slideClassName(isActive)} id="s2">
+    <section data-slide-idx={3} className={slideClassName(isActive)} id="s2">
       <div className="eyebrow" style={{ opacity: 1 }}>THE SOLUTION</div>
       <h2 className="title" style={{ opacity: 1, fontSize: "56px" }}>One Platform. Local Intelligence. Zero Cloud Risk.</h2>
       <div className="sub" style={{ opacity: 1, maxWidth: "1200px", marginBottom: "40px" }}>
@@ -340,14 +216,11 @@ export function Slide03Solution({ isActive }: SlideComponentProps) {
               opacity: 1,
               background: "transparent",
               border: "1px solid rgba(0, 212, 255, 0.15)",
-              padding: "40px"
+              padding: "48px 40px"
             }}
           >
-            <div className="card-icon" style={{ color: "#00d4ff" }}>
-              <Icon size={44} />
-            </div>
-            <div className="card-title" style={{ fontSize: "25px", color: "#ffffff", marginTop: "20px" }}>{title}</div>
-            <div className="card-body" style={{ color: "rgba(255,255,255,0.7)", fontSize: "18px", marginTop: "12px", lineHeight: "1.6" }}>{desc}</div>
+            <div className="card-title" style={{ fontSize: "32px", color: "#ffffff", fontWeight: "bold" }}>{title}</div>
+            <div className="card-body" style={{ color: "rgba(255,255,255,0.8)", fontSize: "22px", marginTop: "20px", lineHeight: "1.6" }}>{desc}</div>
           </div>
         ))}
       </div>
@@ -407,10 +280,10 @@ export function Slide04TechEdge({ isActive }: SlideComponentProps) {
   ];
 
   return (
-    <section data-slide-idx={3} className={slideClassName(isActive)} id="s3">
-      <div className="eyebrow" style={{ opacity: 1 }}>TECHNOLOGY EDGE</div>
+    <section data-slide-idx={4} className={slideClassName(isActive)} id="s3">
+      <div className="eyebrow" style={{ opacity: 1, marginTop: "40px" }}>TECHNOLOGY EDGE</div>
       <h2 className="title" style={{ opacity: 1, fontSize: "60px" }}>Built on Defense-Grade Native Edge AI</h2>
-      <div className="sub" style={{ opacity: 1, marginBottom: "34px" }}>
+      <div className="sub" style={{ opacity: 1, marginBottom: "20px" }}>
         MITS replaces heavy, resource-intensive frameworks with a compact, hand-optimized vision compiler.
       </div>
 
@@ -424,17 +297,17 @@ export function Slide04TechEdge({ isActive }: SlideComponentProps) {
               style={{
                 ...stagger(idx),
                 opacity: 1,
-                padding: "24px",
+                padding: "20px 24px",
                 border: "1px solid rgba(255,255,255,0.06)",
                 background: "transparent"
               }}
             >
-              <div className="card-label" style={{ fontSize: "14px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase" }}>{label}</div>
-              <div style={{ display: "flex", alignItems: "baseline", gap: "10px", marginTop: "10px" }}>
-                <div style={{ fontSize: "36px", fontWeight: "bold", color: "#00d4ff" }}>{val}</div>
-                <div style={{ fontSize: "16px", color: "#ff5b5b", textDecoration: "line-through" }}>{comp}</div>
+              <div className="card-label" style={{ fontSize: "16px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", fontWeight: "bold" }}>{label}</div>
+              <div style={{ display: "flex", alignItems: "baseline", gap: "10px", marginTop: "12px" }}>
+                <div style={{ fontSize: "44px", fontWeight: "bold", color: "#00d4ff" }}>{val}</div>
+                <div style={{ fontSize: "18px", color: "#ff5b5b", textDecoration: "line-through" }}>{comp}</div>
               </div>
-              <div style={{ fontSize: "15px", color: "rgba(255,255,255,0.6)", marginTop: "10px", lineHeight: "1.4" }}>{desc}</div>
+              <div style={{ fontSize: "18px", color: "rgba(255,255,255,0.7)", marginTop: "12px", lineHeight: "1.4" }}>{desc}</div>
             </div>
           ))}
         </div>
@@ -452,18 +325,18 @@ export function Slide04TechEdge({ isActive }: SlideComponentProps) {
           }}
         >
           <div>
-            <div style={{ fontFamily: "var(--mono)", fontSize: "14px", color: "#00d4ff", textTransform: "uppercase" }}>Runtime Memory Footprint Comparison</div>
-            <div style={{ fontSize: "28px", fontWeight: 600, color: "#ffffff", marginTop: "10px" }}>Edge Computing Optimization</div>
+            <div style={{ fontFamily: "var(--mono)", fontSize: "16px", color: "#00d4ff", textTransform: "uppercase", fontWeight: "bold" }}>Runtime Memory Footprint Comparison</div>
+            <div style={{ fontSize: "32px", fontWeight: 600, color: "#ffffff", marginTop: "10px" }}>Edge Computing Optimization</div>
           </div>
 
           <div style={{ margin: "30px 0" }}>
             {/* MITS Bar */}
             <div style={{ marginBottom: "24px" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "16px", marginBottom: "8px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "18px", marginBottom: "8px" }}>
                 <span style={{ fontWeight: "bold", color: "#00d4ff" }}>MITS Native Compiler</span>
                 <span style={{ fontFamily: "var(--mono)", color: "#00d4ff" }}>38 MB</span>
               </div>
-              <div style={{ height: "16px", background: "rgba(255,255,255,0.06)", borderRadius: "8px", overflow: "hidden" }}>
+              <div style={{ height: "18px", background: "rgba(255,255,255,0.06)", borderRadius: "8px", overflow: "hidden" }}>
                 <div
                   style={{
                     height: "100%",
@@ -478,11 +351,11 @@ export function Slide04TechEdge({ isActive }: SlideComponentProps) {
 
             {/* Competitor Bar */}
             <div>
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "16px", marginBottom: "8px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "18px", marginBottom: "8px" }}>
                 <span style={{ fontWeight: 500, color: "rgba(255,255,255,0.6)" }}>Traditional CV Frameworks (PyTorch/Docker)</span>
                 <span style={{ fontFamily: "var(--mono)", color: "#ff5b5b" }}>4,000 MB</span>
               </div>
-              <div style={{ height: "16px", background: "rgba(255,255,255,0.06)", borderRadius: "8px", overflow: "hidden" }}>
+              <div style={{ height: "18px", background: "rgba(255,255,255,0.06)", borderRadius: "8px", overflow: "hidden" }}>
                 <div
                   style={{
                     height: "100%",
@@ -498,17 +371,27 @@ export function Slide04TechEdge({ isActive }: SlideComponentProps) {
 
           <div
             style={{
-              padding: "16px 20px",
+              padding: "18px 24px",
               borderRadius: "14px",
-              background: "transparent",
-              border: "1px solid rgba(0, 212, 255, 0.12)",
-              fontSize: "16px",
+              background: "rgba(0, 212, 255, 0.03)",
+              border: "1px solid rgba(0, 212, 255, 0.15)",
+              fontSize: "18px",
               color: "rgba(255,255,255,0.8)",
               lineHeight: "1.5"
             }}
           >
-            <strong>Local Processing Native:</strong> Saves hardware infrastructure budgets by fully running models on existing low-cost roadside servers without dedicated server GPUs.
+            <strong style={{ color: "#ffffff" }}>Local Processing Native:</strong> Saves hardware infrastructure budgets by fully running models on existing low-cost roadside servers without dedicated server GPUs.
           </div>
+        </div>
+      </div>
+      
+      {/* Certification Footer */}
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
+        <div style={{ padding: "16px 32px", background: "rgba(255, 255, 255, 0.05)", border: "1px solid rgba(255, 255, 255, 0.1)", borderRadius: "99px", display: "flex", alignItems: "center", gap: "16px" }}>
+          <img src="/assets/nist_logo.png" alt="NIST" style={{ height: "24px", objectFit: "contain" }} />
+          <span style={{ fontSize: "20px", color: "#ffffff", fontWeight: "bold", letterSpacing: "0.1em" }}>NIST & FIPS CERTIFIED</span>
+          <span style={{ fontSize: "18px", color: "rgba(255,255,255,0.6)" }}>|</span>
+          <span style={{ fontSize: "18px", color: "rgba(255,255,255,0.7)" }}>Defense-grade encryption and biometric matching standards</span>
         </div>
       </div>
     </section>
@@ -522,16 +405,15 @@ export function Slide06FunctionalScope({ isActive }: SlideComponentProps) {
   const scopes = [
     {
       kicker: "A. VEHICLE INTELLIGENCE",
-      icon: Car,
-      bullets: [
-        "Provincial Excise Support: Custom Punjab, Sindh, KPK, and Islamabad plates.",
-        "Stylized Plate OCR: Translates non-standard fonts, sizes, and colors.",
-        "Complete Profiling: Extracts vehicle model, make, and body color in real-time."
-      ]
+bullets: [
+  "Hotlist & Stolen Vehicle Detection: Real-time cross-referencing against law enforcement databases for flagged or stolen vehicles.",
+  "Illegal Plate Identification: Detects fraudulent, obscured, non-standard, or tampered license plates.",
+  "Behavioral Forensics: Tracks suspicious movement patterns, including blacklisted entry attempts and high-speed trajectory analysis.",
+  "Deep Metadata Profiling: Instant extraction of vehicle make, model, and color for high-accuracy suspect matching."
+]
     },
     {
       kicker: "B. PERSONNEL BIOMETRICS",
-      icon: UserCheck,
       bullets: [
         "Biometric Watchlists: Instantly verifies driver faces against custom hotlists.",
         "Identity Correlation: Automatically links driver biometric matches with vehicle plate records.",
@@ -540,7 +422,6 @@ export function Slide06FunctionalScope({ isActive }: SlideComponentProps) {
     },
     {
       kicker: "C. SECURITY THREAT DETECTION",
-      icon: ShieldAlert,
       bullets: [
         "Active Weapon Alert: Detects brandished firearms instantly on stream.",
         "Feed Tampering Defense: Spots video signal loss, camera occlusion, or movement attempts.",
@@ -549,7 +430,6 @@ export function Slide06FunctionalScope({ isActive }: SlideComponentProps) {
     },
     {
       kicker: "D. ACCESS & BARRICADE INTEGRATION",
-      icon: Sliders,
       bullets: [
         "Gated Estate Automation: Direct barrier control triggers for DHA & Bahria checkpoints.",
         "Dynamic Guard Lists: Flag customized Whitelists (Residents) and Blacklists (Alerts) instantly.",
@@ -559,42 +439,49 @@ export function Slide06FunctionalScope({ isActive }: SlideComponentProps) {
   ];
 
   return (
-    <section data-slide-idx={4} className={slideClassName(isActive)} id="s4">
+    <section data-slide-idx={5} className={slideClassName(isActive)} id="s4">
       <div className="eyebrow" style={{ opacity: 1 }}>PRODUCT CAPABILITIES</div>
       <h2 className="title" style={{ opacity: 1, fontSize: "56px" }}>Localized Vehicle & Personnel Intelligence</h2>
-      <div className="sub" style={{ opacity: 1, marginBottom: "36px" }}>
+      <div className="sub" style={{ opacity: 1, marginBottom: "16px" }}>
         MITS replaces multiple disconnected security devices with a single, highly unified multi-model edge AI stack.
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
-        {scopes.map(({ kicker, icon: Icon, bullets }, idx) => (
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+        {scopes.map(({ kicker, bullets }, idx) => (
           <div
             key={kicker}
             className="card"
             style={{
               ...stagger(idx),
               opacity: 1,
-              padding: "28px 32px",
+              padding: "16px 24px",
               border: "1px solid rgba(255,255,255,0.06)",
               background: "transparent"
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
               <div style={{ color: "#00d4ff", display: "flex", alignItems: "center" }}>
-                <Icon size={28} />
               </div>
               <div style={{ fontFamily: "var(--mono)", fontSize: "16px", color: "#00d4ff", fontWeight: "bold", letterSpacing: "0.05em" }}>
                 {kicker}
               </div>
             </div>
 
-            <ul style={{ marginTop: "18px", listStyle: "none", display: "flex", flexDirection: "column", gap: "10px" }}>
-              {bullets.map((bullet) => (
-                <li key={bullet} style={{ display: "flex", gap: "10px", fontSize: "16px", color: "rgba(255,255,255,0.75)", lineHeight: "1.5" }}>
-                  <span style={{ color: "#00d4ff", fontWeight: "bold" }}>▸</span>
-                  <span>{bullet}</span>
-                </li>
-              ))}
+            <ul style={{ marginTop: "12px", listStyle: "none", display: "flex", flexDirection: "column", gap: "8px" }}>
+              {bullets.map((bullet) => {
+                const parts = bullet.split(':');
+                const title = parts[0];
+                const desc = parts.slice(1).join(':');
+                return (
+                  <li key={bullet} style={{ display: "flex", gap: "12px", fontSize: "18px", color: "rgba(255,255,255,0.75)", lineHeight: "1.3" }}>
+                    <span style={{ color: "#00d4ff", fontWeight: "bold", marginTop: "2px" }}>▸</span>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
+                      <span style={{ fontSize: "22px", fontWeight: "bold", color: "#ffffff", letterSpacing: "0.02em" }}>{title}</span>
+                      {desc && <span style={{ opacity: 0.9 }}>{desc.trim()}</span>}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}
@@ -616,7 +503,7 @@ export function Slide07ProductRealTime({ isActive }: SlideComponentProps) {
   const metrics = [
     {
       val: "98.6%",
-      label: "Plate OCR Yield",
+      label: "Plate OCR Accuracy",
       desc: "Extreme Conditions",
       detail: "Reliably reads standard, custom, and damaged Pakistani plates under heavy rain, dust, headlight glare, and at highway speeds."
     },
@@ -629,7 +516,7 @@ export function Slide07ProductRealTime({ isActive }: SlideComponentProps) {
   ];
 
   return (
-    <section data-slide-idx={5} className={slideClassName(isActive)} id="s5">
+    <section data-slide-idx={6} className={slideClassName(isActive)} id="s5">
       <div className="eyebrow" style={{ opacity: 1 }}>OPERATIONAL METRICS</div>
       <h2 className="title" style={{ opacity: 1, fontSize: "60px" }}>High-Fidelity Edge Operations in Real Time</h2>
       <div className="sub" style={{ opacity: 1, marginBottom: "40px" }}>
@@ -658,12 +545,12 @@ export function Slide07ProductRealTime({ isActive }: SlideComponentProps) {
                   <div style={{ fontFamily: "var(--mono)", fontSize: "12px", color: "#00d4ff", textTransform: "uppercase" }}>{desc}</div>
                 </div>
               </div>
-              <div style={{ fontSize: "15px", color: "rgba(255,255,255,0.6)", marginTop: "14px", lineHeight: "1.5" }}>{detail}</div>
+              <div style={{ fontSize: "17.5px", color: "rgba(255,255,255,0.6)", marginTop: "14px", lineHeight: "1.5" }}>{detail}</div>
             </div>
           ))}
         </div>
 
-        {/* Right Side: Graph 3 Bandwidth Savings */}
+        {/* Right Side: Facial Recognition */}
         <div
           style={{
             background: "transparent",
@@ -677,61 +564,41 @@ export function Slide07ProductRealTime({ isActive }: SlideComponentProps) {
         >
           <div>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span style={{ fontFamily: "var(--mono)", fontSize: "14px", color: "#00d4ff", textTransform: "uppercase" }}>WAN Network Efficiency</span>
-              <span style={{ background: "transparent", color: "#00d4ff", border: "1px solid rgba(0, 212, 255, 0.3)", padding: "4px 10px", borderRadius: "99px", fontSize: "12px", fontFamily: "var(--mono)" }}>
-                100% Offline
+              <span style={{ fontFamily: "var(--mono)", fontSize: "14px", color: "#00d4ff", textTransform: "uppercase", fontWeight: "bold" }}>Biometric Intelligence</span>
+              <span style={{ background: "rgba(0, 212, 255, 0.1)", color: "#00d4ff", border: "1px solid rgba(0, 212, 255, 0.3)", padding: "6px 14px", borderRadius: "99px", fontSize: "13px", fontFamily: "var(--mono)", fontWeight: "bold" }}>
+                Active Scanning
               </span>
             </div>
-            <div style={{ fontSize: "24px", fontWeight: 600, color: "#ffffff", marginTop: "10px" }}>Network Bandwidth Usage</div>
-            <div style={{ fontSize: "14px", color: "rgba(255,255,255,0.5)", marginTop: "4px" }}>Monthly cellular bandwidth data consumption per 100 cameras</div>
+            <div style={{ fontSize: "36px", fontWeight: "bold", color: "#ffffff", marginTop: "24px" }}>Facial Recognition</div>
+            <div style={{ fontSize: "18px", color: "rgba(255,255,255,0.6)", marginTop: "12px", lineHeight: "1.6" }}>
+              Our native edge engine incorporates defense-grade biometric tracking for instantaneous personnel identification and security alerts.
+            </div>
           </div>
 
-          <div style={{ width: "100%", height: "200px", marginTop: "15px" }}>
-            <svg viewBox="0 0 450 260" style={{ width: "100%", height: "100%", display: "block" }}>
-              <defs>
-                <linearGradient id="gradRed" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#ff5b5b" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#ef4444" stopOpacity="0.8" />
-                </linearGradient>
-                <linearGradient id="gradCyan" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#00d4ff" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#0a8fa3" stopOpacity="0.8" />
-                </linearGradient>
-              </defs>
+          <div style={{ display: "flex", flexDirection: "column", gap: "28px", marginTop: "40px" }}>
+            <div style={{ display: "flex", gap: "20px" }}>
+              <div style={{ fontSize: "28px", color: "#00d4ff", fontWeight: "bold", width: "40px", fontFamily: "var(--mono)" }}>01</div>
+              <div>
+                <div style={{ fontSize: "22px", fontWeight: "bold", color: "#ffffff" }}>Anti-Spoofing & Liveness</div>
+                <div style={{ fontSize: "16px", color: "rgba(255,255,255,0.5)", marginTop: "6px", lineHeight: "1.4" }}>Defeats printed photos, 3D masks, and digital screen bypass attempts.</div>
+              </div>
+            </div>
+            
+            <div style={{ display: "flex", gap: "20px" }}>
+              <div style={{ fontSize: "28px", color: "#00d4ff", fontWeight: "bold", width: "40px", fontFamily: "var(--mono)" }}>02</div>
+              <div>
+                <div style={{ fontSize: "22px", fontWeight: "bold", color: "#ffffff" }}>Million-Scale Watchlists</div>
+                <div style={{ fontSize: "16px", color: "rgba(255,255,255,0.5)", marginTop: "6px", lineHeight: "1.4" }}>Performs sub-100ms cross-referencing against massive local hotlists.</div>
+              </div>
+            </div>
 
-              {/* Grid Lines */}
-              <line x1="60" y1="50" x2="400" y2="50" stroke="rgba(255,255,255,0.06)" strokeDasharray="5,5" />
-              <line x1="60" y1="125" x2="400" y2="125" stroke="rgba(255,255,255,0.06)" strokeDasharray="5,5" />
-              <line x1="60" y1="200" x2="400" y2="200" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" />
-
-              {/* Left Bar - Cloud Stream (2,400 GB) */}
-              <rect
-                x="110"
-                y={animate ? "60" : "200"}
-                width="60"
-                height={animate ? "140" : "0"}
-                fill="url(#gradRed)"
-                rx="6"
-                style={{ transition: "all 1.2s cubic-bezier(0.1, 0.8, 0.2, 1) 0.3s" }}
-              />
-              <text x="140" y={animate ? "50" : "190"} fill="#ff8888" fontSize="13" fontWeight="bold" fontFamily="var(--mono)" textAnchor="middle">2,400 GB</text>
-
-              {/* Right Bar - MITS Local Edge (0 GB) */}
-              <rect
-                x="280"
-                y={animate ? "198" : "200"}
-                width="60"
-                height={animate ? "2" : "0"}
-                fill="url(#gradCyan)"
-                rx="2"
-                style={{ transition: "all 1.2s cubic-bezier(0.1, 0.8, 0.2, 1) 0.6s" }}
-              />
-              <text x="310" y={animate ? "180" : "190"} fill="#00d4ff" fontSize="13" fontWeight="bold" fontFamily="var(--mono)" textAnchor="middle">0 GB</text>
-
-              {/* Labels */}
-              <text x="140" y="225" fill="rgba(255,255,255,0.5)" fontSize="12" fontFamily="var(--sans)" textAnchor="middle">Cloud SaaS ALPR</text>
-              <text x="310" y="225" fill="#00d4ff" fontSize="12" fontFamily="var(--sans)" textAnchor="middle" fontWeight="bold">MITS Local Edge</text>
-            </svg>
+            <div style={{ display: "flex", gap: "20px" }}>
+              <div style={{ fontSize: "28px", color: "#00d4ff", fontWeight: "bold", width: "40px", fontFamily: "var(--mono)" }}>03</div>
+              <div>
+                <div style={{ fontSize: "22px", fontWeight: "bold", color: "#ffffff" }}>Mask & Helmet Evasion</div>
+                <div style={{ fontSize: "16px", color: "rgba(255,255,255,0.5)", marginTop: "6px", lineHeight: "1.4" }}>Accurately detects and logs individuals attempting to obscure their identity.</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -746,213 +613,46 @@ export function Slide09AgentSwarms({
   isActive,
   onAdvance,
 }: SlideComponentProps) {
-  const firstVideoRef = useRef<HTMLVideoElement>(null);
-  const secondVideoRef = useRef<HTMLVideoElement>(null);
-  const thirdVideoRef = useRef<HTMLVideoElement>(null);
-  const [activeVideo, setActiveVideo] = useState<0 | 1 | 2>(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const firstVideo = firstVideoRef.current;
-    const secondVideo = secondVideoRef.current;
-    const thirdVideo = thirdVideoRef.current;
+    const video = videoRef.current;
+    if (!video) return;
 
-    if (!firstVideo || !secondVideo || !thirdVideo) return;
-
-    const resetVideos = () => {
-      firstVideo.pause();
-      secondVideo.pause();
-      thirdVideo.pause();
-      firstVideo.currentTime = 0;
-      secondVideo.currentTime = 0;
-      thirdVideo.currentTime = 0;
-    };
-
-    resetVideos();
-    setActiveVideo(0);
-
-    return resetVideos;
+    if (isActive) {
+      video.currentTime = 0;
+      video.volume = 1.0;
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {});
+      }
+    } else {
+      video.pause();
+      video.currentTime = 0;
+    }
   }, [isActive]);
-
-  useEffect(() => {
-    if (!isActive) return;
-
-    const activeRef = [firstVideoRef, secondVideoRef, thirdVideoRef][
-      activeVideo
-    ];
-    const activeElement = activeRef.current;
-
-    if (!activeElement) return;
-
-    activeElement.currentTime = 0;
-    const playPromise = activeElement.play();
-    playPromise?.catch(() => {});
-  }, [activeVideo, isActive]);
 
   return (
     <section
-      data-slide-idx="8-video"
+      data-slide-idx={7}
       className={slideClassName(isActive)}
       id="s8-video"
     >
       <div className="swarm-video-shell" data-stagger-item style={stagger(0)}>
-        <div className="swarm-video-frame">
+        <div className="swarm-video-frame" id="s8-video-frame">
           <video
-            ref={firstVideoRef}
-            className={`swarm-video${activeVideo === 0 ? " swarm-video-active" : ""}`}
+            ref={videoRef}
+            className={`swarm-video${isActive ? " swarm-video-active" : ""}`}
             src="/assets/video-2.mp4"
-            muted
+            controls
             playsInline
             preload="auto"
             onLoadedMetadata={(event) => {
-              event.currentTarget.defaultPlaybackRate = 1.5;
-              event.currentTarget.playbackRate = 1.5;
+              event.currentTarget.defaultPlaybackRate = 1.0;
+              event.currentTarget.playbackRate = 1.0;
             }}
-            onEnded={() => setActiveVideo(1)}
-          />
-          <video
-            ref={secondVideoRef}
-            className={`swarm-video${activeVideo === 1 ? " swarm-video-active" : ""}`}
-            src="/assets/video-3.mp4"
-            muted
-            playsInline
-            preload="auto"
-            onLoadedMetadata={(event) => {
-              event.currentTarget.defaultPlaybackRate = 1.6;
-              event.currentTarget.playbackRate = 1.6;
-            }}
-            onEnded={() => setActiveVideo(2)}
-          />
-          <video
-            ref={thirdVideoRef}
-            className={`swarm-video${activeVideo === 2 ? " swarm-video-active" : ""}`}
-            src="/assets/video-1.mp4"
-            muted
-            playsInline
-            preload="auto"
-            onLoadedMetadata={(event) => {
-              event.currentTarget.defaultPlaybackRate = 2;
-              event.currentTarget.playbackRate = 2;
-            }}
-            onEnded={(event) => {
-              event.currentTarget.currentTime = 0;
-              event.currentTarget.playbackRate = 2;
-              onAdvance?.();
-            }}
-          />
-          <div className="swarm-video-shade" />
-          <div className="swarm-video-copy-wrap" style={{ background: "rgba(0,0,0,0.5)" }}>
-            <div className="eyebrow swarm-video-kicker" style={{ color: "#00d4ff" }}>
-              DEMO: MULTI-CAMERA STREAM MANAGEMENT
-            </div>
-            <div className="swarm-video-text-stack">
-              <h2
-                className="swarm-video-line swarm-video-title-line"
-                style={{ ...stagger(0), color: "#ffffff", fontSize: "70px" }}
-              >
-                MITS Multi-Camera Operations
-              </h2>
-              <div
-                className="swarm-video-line swarm-video-body-line"
-                style={stagger(1)}
-              >
-                Persistent vehicle tracking and trajectory mapping across distributed networks.
-              </div>
-              <div
-                className="swarm-video-line swarm-video-body-line"
-                style={{ ...stagger(2), color: "#00d4ff", fontWeight: "bold" }}
-              >
-                100% Native Edge. Under 100ms Event Recognition.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ────────────────────────────────────────────────────────────────────────────────
-// SLIDE 8: HOW MITS EXPLAINER VIDEO
-// ────────────────────────────────────────────────────────────────────────────────
-export function Slide10HowNftWorks({
-  isActive,
-  onAdvance,
-}: SlideComponentProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [showOverlay, setShowOverlay] = useState(true);
-
-  useEffect(() => {
-    setShowOverlay(true);
-
-    if (!isActive) return;
-
-    const timer = window.setTimeout(() => {
-      setShowOverlay(false);
-    }, 2000);
-
-    return () => {
-      window.clearTimeout(timer);
-    };
-  }, [isActive]);
-
-  useEffect(() => {
-    const video = videoRef.current;
-
-    if (!video) return;
-
-    video.pause();
-    video.currentTime = 0;
-
-    if (!isActive) return;
-
-    const playPromise = video.play();
-    playPromise?.catch(() => {});
-
-    return () => {
-      video.pause();
-      video.currentTime = 0;
-    };
-  }, [isActive]);
-
-  return (
-    <section
-      data-slide-idx="9-nft-video"
-      className={slideClassName(isActive)}
-      id="s9-nft-video"
-    >
-      <div className="swarm-video-shell" data-stagger-item style={stagger(0)}>
-        <div className="swarm-video-frame">
-          <video
-            ref={videoRef}
-            className={`swarm-video${isActive ? " swarm-video-active" : ""}`}
-            src="/assets/how%20nft%20works.mp4"
-            muted
-            onLoadedMetadata={(event) => {
-              event.currentTarget.defaultPlaybackRate = 1.5;
-              event.currentTarget.playbackRate = 1.5;
-            }}
-            playsInline
-            preload="auto"
             onEnded={() => onAdvance?.()}
           />
-          <div
-            className={`swarm-video-shade${showOverlay ? "" : " swarm-video-overlay-hidden"}`}
-          />
-          <div
-            className={`swarm-video-copy-wrap${showOverlay ? "" : " swarm-video-overlay-hidden"}`}
-          >
-            <div className="eyebrow swarm-video-kicker" style={{ color: "#00d4ff" }}>
-              MITS SYSTEM EXPLAINER
-            </div>
-            <div className="swarm-video-text-stack">
-              <h2
-                className="swarm-video-line swarm-video-title-line"
-                style={{ ...stagger(0), color: "#ffffff", fontSize: "70px" }}
-              >
-                Advanced Personnel Intelligence (AVPI)
-              </h2>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -960,95 +660,7 @@ export function Slide10HowNftWorks({
 }
 
 // ────────────────────────────────────────────────────────────────────────────────
-// SLIDE 9: THREAT DETECTION VIDEO WORKFLOW
-// ────────────────────────────────────────────────────────────────────────────────
-export function Slide11HowTradingWorks({
-  isActive,
-  onAdvance,
-}: SlideComponentProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [showOverlay, setShowOverlay] = useState(true);
-
-  useEffect(() => {
-    setShowOverlay(true);
-
-    if (!isActive) return;
-
-    const timer = window.setTimeout(() => {
-      setShowOverlay(false);
-    }, 2000);
-
-    return () => {
-      window.clearTimeout(timer);
-    };
-  }, [isActive]);
-
-  useEffect(() => {
-    const video = videoRef.current;
-
-    if (!video) return;
-
-    video.pause();
-    video.currentTime = 0;
-
-    if (!isActive) return;
-
-    const playPromise = video.play();
-    playPromise?.catch(() => {});
-
-    return () => {
-      video.pause();
-      video.currentTime = 0;
-    };
-  }, [isActive]);
-
-  return (
-    <section
-      data-slide-idx="10-trading-video"
-      className={slideClassName(isActive)}
-      id="s10-trading-video"
-    >
-      <div className="swarm-video-shell" data-stagger-item style={stagger(0)}>
-        <div className="swarm-video-frame">
-          <video
-            ref={videoRef}
-            className={`swarm-video${isActive ? " swarm-video-active" : ""}`}
-            src="/assets/how%20trading%20works.mp4"
-            muted
-            onLoadedMetadata={(event) => {
-              event.currentTarget.defaultPlaybackRate = 1.5;
-              event.currentTarget.playbackRate = 1.5;
-            }}
-            playsInline
-            preload="auto"
-            onEnded={() => onAdvance?.()}
-          />
-          <div
-            className={`swarm-video-shade${showOverlay ? "" : " swarm-video-overlay-hidden"}`}
-          />
-          <div
-            className={`swarm-video-copy-wrap${showOverlay ? "" : " swarm-video-overlay-hidden"}`}
-          >
-            <div className="eyebrow swarm-video-kicker" style={{ color: "#00d4ff" }}>
-              REAL-TIME DETECTION DEMO
-            </div>
-            <div className="swarm-video-text-stack">
-              <h2
-                className="swarm-video-line swarm-video-title-line"
-                style={{ ...stagger(0), color: "#ffffff", fontSize: "70px" }}
-              >
-                Threat Detection & SSE Alert Feed
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ────────────────────────────────────────────────────────────────────────────────
-// SLIDE 10: PAKISTAN MARKET & DYNAMICS (GRAPH 4: PREMIUM LINE SCALING)
+// SLIDE 8: PAKISTAN MARKET & DYNAMICS (GRAPH 4: PREMIUM LINE SCALING)
 // ────────────────────────────────────────────────────────────────────────────────
 export function Slide14WhyNow({ isActive }: SlideComponentProps) {
   const [animate, setAnimate] = useState(false);
@@ -1059,16 +671,16 @@ export function Slide14WhyNow({ isActive }: SlideComponentProps) {
 
   const marketDrivers = [
     {
-      title: "1. Swapping Legacy Leases",
-      desc: "Residential gated communities are actively phasing out expensive cellular monthly ALPR hardware leases."
+      title: "1. High Power Efficiency",
+      desc: "Running advanced security systems locally requires much less electricity, keeping operational costs extremely low."
     },
     {
-      title: "2. Mandating Local Storage",
-      desc: "Provincial public safety departments restrict cloud transmission, legally requiring 100% offline air-gapped data."
+      title: "2. Replacing High-Priced Legacy Solutions",
+      desc: "Moving away from expensive, outdated monthly subscriptions in favor of modern, cost-effective infrastructure."
     },
     {
-      title: "3. Power-Efficient Modernization",
-      desc: "MITS's local compiler enables running complex multi-model analytics on lightweight, low-power ARM servers."
+      title: "3. Local Storage for Sensitive Institutions",
+      desc: "Keeping sensitive information strictly on-site to meet the strict security demands of government and defense agencies."
     }
   ];
 
@@ -1084,14 +696,14 @@ export function Slide14WhyNow({ isActive }: SlideComponentProps) {
   const areaPath = `${linePath} L 390 230 L 60 230 Z`;
 
   return (
-    <section data-slide-idx={9} className={slideClassName(isActive)} id="s7">
+    <section data-slide-idx={8} className={slideClassName(isActive)} id="s7">
       <div className="eyebrow" style={{ opacity: 1 }}>WHY NOW</div>
-      <h2 className="title" style={{ opacity: 1, fontSize: "60px" }}>The Shift Towards Offline Edge Intelligence</h2>
+      <h2 className="title" style={{ opacity: 1, fontSize: "60px" }}>Why the shift is needed</h2>
       <div className="sub" style={{ opacity: 1, marginBottom: "40px" }}>
         MITS sits at the convergence of high-capacity edge hardware availability and tight data sovereignty demands.
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "40px" }}>
         {/* Left: Drivers */}
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
           {marketDrivers.map(({ title, desc }, idx) => (
@@ -1107,110 +719,18 @@ export function Slide14WhyNow({ isActive }: SlideComponentProps) {
               }}
             >
               <div style={{ fontSize: "20px", fontWeight: "bold", color: "#00d4ff" }}>{title}</div>
-              <div style={{ fontSize: "16px", color: "rgba(255,255,255,0.7)", marginTop: "8px", lineHeight: "1.5" }}>{desc}</div>
+              <div style={{ fontSize: "17.5px", color: "rgba(255,255,255,0.7)", marginTop: "8px", lineHeight: "1.5" }}>{desc}</div>
             </div>
           ))}
         </div>
 
-        {/* Right: SVG Graph 4 Stream Scaling */}
-        <div
-          style={{
-            background: "transparent",
-            borderRadius: "24px",
-            border: "1px solid rgba(0, 212, 255,0.15)",
-            padding: "30px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            position: "relative"
-          }}
-        >
-          <div>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span style={{ fontFamily: "var(--mono)", fontSize: "14px", color: "#00d4ff", textTransform: "uppercase" }}>Optimization Yield</span>
-              <span style={{ background: "transparent", color: "#00d4ff", border: "1px solid rgba(0, 212, 255, 0.3)", padding: "4px 10px", borderRadius: "99px", fontSize: "12px", fontFamily: "var(--mono)" }}>
-                8x Scaling
-              </span>
-            </div>
-            <div style={{ fontSize: "24px", fontWeight: 600, color: "#ffffff", marginTop: "10px" }}>Streams per CPU Core</div>
-            <div style={{ fontSize: "15px", color: "rgba(255,255,255,0.5)", marginTop: "4px" }}>Concurrent HD stream capacity processed per standard CPU core</div>
-          </div>
-
-          <div style={{ width: "100%", height: "240px", marginTop: "10px", position: "relative" }}>
-            <svg viewBox="0 0 450 260" style={{ width: "100%", height: "100%", display: "block" }}>
-              <defs>
-                <linearGradient id="areaCyan" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#00d4ff" stopOpacity="0.2" />
-                  <stop offset="100%" stopColor="#060b12" stopOpacity="0.0" />
-                </linearGradient>
-                <linearGradient id="streamLineGradient" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="#ffd166" />
-                  <stop offset="40%" stopColor="#ffd166" />
-                  <stop offset="70%" stopColor="#ffd166" />
-                  <stop offset="100%" stopColor="#00d4ff" />
-                </linearGradient>
-              </defs>
-
-              {/* Grid Lines */}
-              <line x1="60" y1="60" x2="390" y2="60" stroke="rgba(255,255,255,0.06)" strokeDasharray="5,5" />
-              <line x1="60" y1="100" x2="390" y2="100" stroke="rgba(255,255,255,0.06)" strokeDasharray="5,5" />
-              <line x1="60" y1="160" x2="390" y2="160" stroke="rgba(255,255,255,0.06)" strokeDasharray="5,5" />
-              <line x1="60" y1="200" x2="390" y2="200" stroke="rgba(255,255,255,0.06)" strokeDasharray="5,5" />
-              <line x1="60" y1="230" x2="390" y2="230" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" />
-
-              {/* Area path */}
-              <path
-                d={areaPath}
-                fill="url(#areaCyan)"
-                style={{
-                  opacity: animate ? 1 : 0,
-                  transition: "opacity 1.5s ease-in-out 0.8s"
-                }}
-              />
-
-              {/* Line path */}
-              <path
-                d={linePath}
-                fill="none"
-                stroke="url(#streamLineGradient)"
-                strokeWidth="4"
-                strokeLinecap="round"
-                style={{
-                  strokeDasharray: 600,
-                  strokeDashoffset: animate ? 0 : 600,
-                  transition: "stroke-dashoffset 1.8s ease-in-out 0.3s"
-                }}
-              />
-
-              {/* Growth Callout Label */}
-              {animate && (
-                <text x="230" y="128" fill="#00d4ff" fontSize="10" fontWeight="bold" fontFamily="var(--sans)" letterSpacing="0.05em" textAnchor="middle" style={{ animation: "fadeIn 0.5s ease-out 1.0s forwards", opacity: 0 }}>
-                  +8x SCALING CAPACITY
-                </text>
-              )}
-
-              {/* Data Nodes */}
-              {chartPoints.map((p, idx) => (
-                <g key={p.label} style={{ opacity: animate ? 1 : 0, transition: `opacity 0.5s ease-out ${0.4 + idx * 0.3}s` }}>
-                  <circle cx={p.x} cy={p.y} r={idx === 3 ? "14" : "10"} fill={idx === 3 ? "#00d4ff" : "#ffd166"} opacity={idx === 3 ? "0.35" : "0.2"} />
-                  <circle cx={p.x} cy={p.y} r={idx === 3 ? "6" : "5"} fill="#ffffff" stroke={idx === 3 ? "#00d4ff" : "#ffd166"} strokeWidth={idx === 3 ? "3" : "2.5"} />
-                  <text x={p.x} y="250" fill={idx === 3 ? "#00d4ff" : "rgba(255,255,255,0.5)"} fontSize="11" fontFamily="var(--mono)" fontWeight={idx === 3 ? "bold" : "normal"} textAnchor="middle">{p.label}</text>
-                  <text x={p.x} y={p.y - (idx === 3 ? 22 : 15)} fill={idx === 3 ? "#00d4ff" : "#ffffff"} fontSize={idx === 3 ? "14" : "12"} fontWeight="bold" fontFamily="var(--sans)" fontStyle="italic" textAnchor="middle">{idx === 3 ? "32 FEEDS" : `${p.value} Feeds`}</text>
-                </g>
-              ))}
-            </svg>
-          </div>
-          <div style={{ textAlign: "center", fontSize: "14px", color: "rgba(255,255,255,0.45)", fontFamily: "var(--sans)", fontStyle: "italic", marginTop: "16px", letterSpacing: "0.02em" }}>
-            Maximize channel scalability by 8x through compiler optimization — The technical core of MITS real-time processing.
-          </div>
-        </div>
       </div>
     </section>
   );
 }
 
 // ────────────────────────────────────────────────────────────────────────────────
-// SLIDE 11: THE COMPETITIVE MATRIX
+// SLIDE 9: THE COMPETITIVE MATRIX
 // ────────────────────────────────────────────────────────────────────────────────
 export function Slide12CompetitiveMatrix({ isActive }: SlideComponentProps) {
   const comparisonData = [
@@ -1247,7 +767,7 @@ export function Slide12CompetitiveMatrix({ isActive }: SlideComponentProps) {
   ];
 
   return (
-    <section data-slide-idx={10} className={slideClassName(isActive)} id="s6">
+    <section data-slide-idx={9} className={slideClassName(isActive)} id="s6">
       <div className="eyebrow" style={{ opacity: 1 }}>COMPETITIVE LANDSCAPE</div>
       <h2 className="title" style={{ opacity: 1, fontSize: "56px" }}>Outpositioning Legacy Security Tech</h2>
       <div className="sub" style={{ opacity: 1, marginBottom: "26px" }}>
@@ -1288,7 +808,7 @@ export function Slide12CompetitiveMatrix({ isActive }: SlideComponentProps) {
                     padding: "18px 20px",
                     color: "#00d4ff",
                     fontWeight: 600,
-                    fontSize: "14px",
+                    fontSize: "20px",
                     background: "rgba(0, 212, 255,0.02)",
                     borderRight: "1px solid rgba(255,255,255,0.06)"
                   }}
@@ -1298,13 +818,13 @@ export function Slide12CompetitiveMatrix({ isActive }: SlideComponentProps) {
                     <span>{mits}</span>
                   </div>
                 </td>
-                <td style={{ padding: "18px 20px", fontSize: "14px", color: "rgba(255,255,255,0.6)", borderRight: "1px solid rgba(255,255,255,0.06)" }}>
+                <td style={{ padding: "18px 20px", fontSize: "20px", color: "rgba(255,255,255,0.6)", borderRight: "1px solid rgba(255,255,255,0.06)" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                     <X size={16} strokeWidth={3} style={{ color: "#ef4444" }} />
                     <span>{flock}</span>
                   </div>
                 </td>
-                <td style={{ padding: "18px 20px", fontSize: "14px", color: "rgba(255,255,255,0.6)" }}>
+                <td style={{ padding: "18px 20px", fontSize: "20px", color: "rgba(255,255,255,0.6)" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                     <X size={16} strokeWidth={3} style={{ color: "#ef4444" }} />
                     <span>{legacy}</span>
@@ -1331,14 +851,16 @@ export function Slide17TractionTrust({ isActive }: SlideComponentProps) {
 
   const trusts = [
     {
-  val: "5",
-  label: "Who will need MITS?",
-  desc: "• Municipal law enforcement agencies (fixed & mobile ALPR replacement)\n• Port authorities and critical infrastructure operators\n• Federal security integrators and systems contractors\n• Commercial campuses, airports, transit hubs\n• Federal procurement via GSA Schedule and SEWP contracts"
-},
-    {
-      val: "99.4%",
-      label: "Custom Plate Yield",
-      desc: "Our localized models resolve non-standard, custom-designed, or weathered provincial vehicle license plates."
+      val: "6",
+      label: "Who will need MITS?",
+      bullets: [
+        { title: "Security agencies", sub: "Threat monitoring and suspect tracking" },
+        { title: "Housing Societies", sub: "Automated residential gate access control" },
+        { title: "Facilities", sub: "Hospitals, schools, and corporate campuses" },
+        { title: "Airports", sub: "High-security perimeter and terminal surveillance" },
+        { title: "Check points", sub: "Military and police barricade monitoring" },
+        { title: "City-wide entry/exit points", sub: "Safe City vehicle and personnel logging" }
+      ]
     }
   ];
 
@@ -1349,15 +871,15 @@ export function Slide17TractionTrust({ isActive }: SlideComponentProps) {
   return (
     <section data-slide-idx={11} className={slideClassName(isActive)} id="s10">
       <div className="eyebrow" style={{ opacity: 1 }}>TRACTION & PILOT VALIDATION</div>
-      <h2 className="title" style={{ opacity: 1, fontSize: "60px" }}>Proven Local Performance & Yield</h2>
+      <h2 className="title" style={{ opacity: 1, fontSize: "60px" }}>Proven Local Performance & Accuracy</h2>
       <div className="sub" style={{ opacity: 1, marginBottom: "40px" }}>
         MITS delivers highly accurate public safety biometrics and ALPR tracking adapted specifically for Pakistan's environment.
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px", marginTop: "20px" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "40px", marginTop: "20px" }}>
         {/* Left Side: Local Traction Numbers */}
         <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-          {trusts.map(({ val, label, desc }, idx) => (
+          {trusts.map(({ val, label, desc, bullets }: any, idx) => (
             <div
               key={label}
               className="card"
@@ -1366,136 +888,40 @@ export function Slide17TractionTrust({ isActive }: SlideComponentProps) {
                 opacity: 1,
                 background: "transparent",
                 border: "1px solid rgba(255,255,255,0.06)",
-                padding: "30px 40px"
+                padding: "40px 50px"
               }}
             >
-              <div style={{ display: "flex", alignItems: "baseline", gap: "16px" }}>
-                <span style={{ fontSize: "54px", fontWeight: "bold", color: "#00d4ff", fontFamily: "var(--serif)", lineHeight: "1" }}>{val}</span>
+              <div style={{ display: "flex", alignItems: "baseline", gap: "20px" }}>
+                <span style={{ fontSize: "64px", fontWeight: "bold", color: "#00d4ff", fontFamily: "var(--serif)", lineHeight: "1" }}>{val}</span>
                 <div>
-                  <div style={{ fontSize: "20px", fontWeight: "bold", color: "#ffffff" }}>{label}</div>
+                  <div style={{ fontSize: "28px", fontWeight: "bold", color: "#ffffff" }}>{label}</div>
                 </div>
               </div>
-              <div style={{ fontSize: "15px", color: "rgba(255,255,255,0.6)", marginTop: "14px", lineHeight: "1.5" }}>{desc}</div>
+              
+              {/* Render either bullets or desc depending on what exists */}
+              <div style={{ marginTop: "24px" }}>
+                {bullets ? (
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "1fr 1fr", columnGap: "40px", rowGap: "24px" }}>
+                    {bullets.map((b:string, i:number) => (
+                      <li key={i} style={{ display: "flex", gap: "16px", lineHeight: "1.4" }}>
+                        <span style={{ color: "#00d4ff", fontWeight: "bold", marginTop: "2px", fontSize: "22px" }}>▸</span>
+                        <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                          <span style={{ fontSize: "22px", fontWeight: "bold", color: "#ffffff" }}>{b.title}</span>
+                          {b.sub && <span style={{ fontSize: "18px", color: "rgba(255,255,255,0.7)" }}>{b.sub}</span>}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <div style={{ fontSize: "18px", color: "rgba(255,255,255,0.75)", lineHeight: "1.6" }}>
+                    {desc}
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Right Side: Graph 5 OCR Recognition Rate (Premium Curve Style) */}
-        <div
-          style={{
-            background: "transparent",
-            borderRadius: "24px",
-            border: "1px solid rgba(0, 212, 255, 0.15)",
-            padding: "24px 28px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            position: "relative"
-          }}
-        >
-          <div>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span style={{ fontFamily: "var(--mono)", fontSize: "13px", color: "#00d4ff", textTransform: "uppercase" }}>OCR Yield Benchmarking</span>
-              <span style={{ background: "transparent", color: "#00d4ff", border: "1px solid rgba(0, 212, 255, 0.3)", padding: "4px 10px", borderRadius: "99px", fontSize: "12px", fontFamily: "var(--mono)" }}>
-                Excise Compliant
-              </span>
-            </div>
-            <div style={{ fontSize: "22px", fontWeight: 600, color: "#ffffff", marginTop: "6px" }}>Pakistani Plate Reading Rate</div>
-            <div style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", marginTop: "2px" }}>Average recognition yield progression under localized engine training</div>
-          </div>
-
-          <div style={{ width: "100%", height: "230px", marginTop: "10px" }}>
-            <svg viewBox="0 0 650 260" style={{ width: "100%", height: "100%", display: "block" }}>
-              <defs>
-                <linearGradient id="curveGradientYield" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="#ff5b5b" />
-                  <stop offset="35%" stopColor="#ff5b5b" />
-                  <stop offset="70%" stopColor="#ffd166" />
-                  <stop offset="100%" stopColor="#00d4ff" />
-                </linearGradient>
-
-                <linearGradient id="areaGradientYield" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#00d4ff" stopOpacity="0.18" />
-                  <stop offset="50%" stopColor="#ffd166" stopOpacity="0.08" />
-                  <stop offset="100%" stopColor="#060b12" stopOpacity="0.0" />
-                </linearGradient>
-              </defs>
-
-              {/* Grid Lines */}
-              <line x1="60" y1="50" x2="610" y2="50" stroke="rgba(255,255,255,0.06)" strokeDasharray="5,5" />
-              <line x1="60" y1="105" x2="610" y2="105" stroke="rgba(255,255,255,0.06)" strokeDasharray="5,5" />
-              <line x1="60" y1="160" x2="610" y2="160" stroke="rgba(255,255,255,0.06)" strokeDasharray="5,5" />
-              <line x1="60" y1="215" x2="610" y2="215" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" />
-
-              {/* Y Axis Labels */}
-              <text x="25" y="55" fill="rgba(255,255,255,0.4)" fontSize="11" fontFamily="var(--mono)">100%</text>
-              <text x="25" y="110" fill="rgba(255,255,255,0.4)" fontSize="11" fontFamily="var(--mono)">80%</text>
-              <text x="25" y="165" fill="rgba(255,255,255,0.4)" fontSize="11" fontFamily="var(--mono)">60%</text>
-              <text x="25" y="220" fill="rgba(255,255,255,0.4)" fontSize="11" fontFamily="var(--mono)">40%</text>
-
-              {/* Area under curve */}
-              <path
-                d={areaPath}
-                fill="url(#areaGradientYield)"
-                style={{
-                  opacity: animate ? 1 : 0,
-                  transition: "opacity 1.5s ease-in-out 0.8s"
-                }}
-              />
-
-              {/* Curve Stroke Line */}
-              <path
-                d={curvePath}
-                fill="none"
-                stroke="url(#curveGradientYield)"
-                strokeWidth="4"
-                strokeLinecap="round"
-                style={{
-                  strokeDasharray: 800,
-                  strokeDashoffset: animate ? 0 : 800,
-                  transition: "stroke-dashoffset 1.8s ease-in-out 0.3s"
-                }}
-              />
-
-              {/* Nodes and Callout Labels */}
-              {animate && (
-                <>
-                  {/* Bottom / Baseline Western ALPR */}
-                  <g style={{ animation: "fadeIn 0.5s ease-out 0.9s forwards", opacity: 0 }}>
-                    <circle cx="60" cy="180" r="12" fill="#ff5b5b" opacity="0.2" />
-                    <circle cx="60" cy="180" r="5" fill="#ffffff" stroke="#ff5b5b" strokeWidth="2.5" />
-                    <text x="60" y="202" fill="#ff5b5b" fontSize="12" fontWeight="bold" fontFamily="var(--sans)" textAnchor="middle">Baseline 58%</text>
-                  </g>
-
-                  {/* Mid Slope text callout */}
-                  <text x="310" y="125" fill="#ffd166" fontSize="11" fontWeight="bold" fontFamily="var(--sans)" letterSpacing="0.08em" textAnchor="middle">
-                    +41.4% YIELD LEAP IN 6 MONTHS
-                  </text>
-
-                  {/* Peak Point DHA Pilot */}
-                  <g style={{ animation: "fadeIn 0.5s ease-out 1.4s forwards", opacity: 0 }}>
-                    <circle cx="540" cy="60" r="14" fill="#00d4ff" opacity="0.3" />
-                    <circle cx="540" cy="60" r="6" fill="#ffffff" stroke="#00d4ff" strokeWidth="3" />
-                    <text x="540" y="38" fill="#00d4ff" fontSize="13" fontWeight="bold" fontFamily="var(--sans)" fontStyle="italic" textAnchor="middle">MITS Pakistan 99.4%</text>
-                  </g>
-                </>
-              )}
-
-              {/* X Axis Labels */}
-              <text x="60" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Sep '25</text>
-              <text x="138" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Oct '25</text>
-              <text x="217" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Nov '25</text>
-              <text x="295" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Dec '25</text>
-              <text x="374" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Jan '26</text>
-              <text x="452" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Feb '26</text>
-              <text x="531" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Mar '26</text>
-              <text x="610" y="235" fill="rgba(255,255,255,0.5)" fontSize="11" fontFamily="var(--sans)" textAnchor="middle">Apr '26</text>
-            </svg>
-          </div>
-          <div style={{ textAlign: "center", fontSize: "14px", color: "rgba(255,255,255,0.45)", fontFamily: "var(--sans)", fontStyle: "italic", marginTop: "16px", letterSpacing: "0.02em" }}>
-            99.4% success rate in resolving unreadable plates — Deployed with Pakistan-specific weight tuning and adaptive OCR.
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -1506,7 +932,7 @@ export function Slide17TractionTrust({ isActive }: SlideComponentProps) {
 // ────────────────────────────────────────────────────────────────────────────────
 export function Slide18ThankYou({ isActive }: SlideComponentProps) {
   return (
-    <section data-slide-idx={12} className={slideClassName(isActive)} id="s11">
+    <section data-slide-idx={11} className={slideClassName(isActive)} id="s11">
       <div className="end-glow" />
       <div style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
         <div
@@ -1565,9 +991,6 @@ export const slides = [
   Slide06FunctionalScope,
   Slide07ProductRealTime,
   Slide09AgentSwarms,
-  Slide10HowNftWorks,
-  Slide11HowTradingWorks,
-  Slide14WhyNow,
   Slide12CompetitiveMatrix,
   Slide17TractionTrust,
   Slide18ThankYou

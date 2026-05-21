@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { slides } from "./slides";
 import TerrainBackground from "./terrain-background";
 
-const TOTAL = slides.length;
+
 
 function animateCountup(el: HTMLElement) {
   const target = parseFloat(el.dataset.cuTarget ?? "0");
@@ -50,8 +50,22 @@ export default function DeckPresentation() {
   };
 
   const goTo = useCallback((i: number) => {
-    if (i < 0 || i >= TOTAL) return;
+    if (i < 0 || i >= slides.length) return;
     setCurrent(i);
+
+    // Synchronously request native fullscreen for demo video slides (Slide 8, index 7)
+    if (i === 7) {
+      setTimeout(() => {
+        const frame = document.getElementById("s8-video-frame");
+        if (frame && !document.fullscreenElement) {
+          frame.requestFullscreen().catch(() => {});
+        }
+      }, 0);
+    } else {
+      if (document.fullscreenElement && document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
   }, []);
 
   const dismissIntro = useCallback(() => {
@@ -140,15 +154,15 @@ export default function DeckPresentation() {
     const onKey = (e: KeyboardEvent) => {
       if (["ArrowRight", "ArrowDown", " "].includes(e.key)) {
         e.preventDefault();
-        setCurrent((c) => Math.min(c + 1, TOTAL - 1));
+        goTo(current + 1);
       } else if (["ArrowLeft", "ArrowUp"].includes(e.key)) {
         e.preventDefault();
-        setCurrent((c) => Math.max(c - 1, 0));
+        goTo(current - 1);
       }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [introDismissed]);
+  }, [introDismissed, current, goTo]);
 
   // Touch navigation
   useEffect(() => {
@@ -156,26 +170,24 @@ export default function DeckPresentation() {
 
     let tx = 0;
     let ty = 0;
-    const onStart = (e: TouchEvent) => {
+    const onTouchStart = (e: TouchEvent) => {
       tx = e.touches[0].clientX;
       ty = e.touches[0].clientY;
     };
-    const onEnd = (e: TouchEvent) => {
+    const onTouchEnd = (e: TouchEvent) => {
       const dx = e.changedTouches[0].clientX - tx;
       const dy = e.changedTouches[0].clientY - ty;
       if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
-        setCurrent((c) =>
-          dx < 0 ? Math.min(c + 1, TOTAL - 1) : Math.max(c - 1, 0),
-        );
+        goTo(dx < 0 ? current + 1 : current - 1);
       }
     };
-    document.addEventListener("touchstart", onStart, { passive: true });
-    document.addEventListener("touchend", onEnd, { passive: true });
+    window.addEventListener("touchstart", onTouchStart, { passive: true });
+    window.addEventListener("touchend", onTouchEnd, { passive: true });
     return () => {
-      document.removeEventListener("touchstart", onStart);
-      document.removeEventListener("touchend", onEnd);
+      window.removeEventListener("touchstart", onTouchStart);
+      window.removeEventListener("touchend", onTouchEnd);
     };
-  }, [introDismissed]);
+  }, [introDismissed, current, goTo]);
 
   // Countup on slide change
   useEffect(() => {
@@ -250,17 +262,17 @@ export default function DeckPresentation() {
           <div className="deck-progress-wrap">
             <div
               className="deck-progress"
-              style={{ width: `${(current / (TOTAL - 1)) * 100}%` }}
+              style={{ width: `${(current / (slides.length - 1)) * 100}%` }}
             />
           </div>
 
-          <div className="deck-nav-bar">
+          <div className="deck-nav-bar ">
             <button className="deck-nav-btn" onClick={() => goTo(current - 1)}>
               ←
             </button>
             <span className="deck-nav-counter">
               {String(current + 1).padStart(2, "0")} /{" "}
-              {String(TOTAL).padStart(2, "0")}
+              {String(slides.length).padStart(2, "0")}
             </span>
             <button className="deck-nav-btn" onClick={() => goTo(current + 1)}>
               →
