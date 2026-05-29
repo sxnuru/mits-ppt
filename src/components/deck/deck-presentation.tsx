@@ -252,6 +252,7 @@ export default function DeckPresentation() {
                 <Slide
                   key={index}
                   isActive={current === index}
+                  isUpcoming={current === index - 1}
                   locale="en"
                   onAdvance={() => goTo(index + 1)}
                 />

@@ -22,6 +22,7 @@ import {
 
 type SlideComponentProps = {
   isActive: boolean;
+  isUpcoming?: boolean;
   locale?: "en";
   onAdvance?: () => void;
 };
@@ -611,9 +612,17 @@ export function Slide07ProductRealTime({ isActive }: SlideComponentProps) {
 // ────────────────────────────────────────────────────────────────────────────────
 export function Slide09AgentSwarms({
   isActive,
+  isUpcoming,
   onAdvance,
 }: SlideComponentProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [hasLoaded, setHasLoaded] = useState(false);
+
+  useEffect(() => {
+    if (isActive || isUpcoming) {
+      setHasLoaded(true);
+    }
+  }, [isActive, isUpcoming]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -640,19 +649,21 @@ export function Slide09AgentSwarms({
     >
       <div className="swarm-video-shell" data-stagger-item style={stagger(0)}>
         <div className="swarm-video-frame" id="s8-video-frame">
-          <video
-            ref={videoRef}
-            className={`swarm-video${isActive ? " swarm-video-active" : ""}`}
-            src="/assets/video-comp.mp4"
-            controls
-            playsInline
-            preload="auto"
-            onLoadedMetadata={(event) => {
-              event.currentTarget.defaultPlaybackRate = 1.0;
-              event.currentTarget.playbackRate = 1.0;
-            }}
-            onEnded={() => onAdvance?.()}
-          />
+          {hasLoaded && (
+            <video
+              ref={videoRef}
+              className={`swarm-video${isActive ? " swarm-video-active" : ""}`}
+              src="/assets/video-comp.mp4"
+              controls
+              playsInline
+              preload="auto"
+              onLoadedMetadata={(event) => {
+                event.currentTarget.defaultPlaybackRate = 1.0;
+                event.currentTarget.playbackRate = 1.0;
+              }}
+              onEnded={() => onAdvance?.()}
+            />
+          )}
         </div>
       </div>
     </section>
